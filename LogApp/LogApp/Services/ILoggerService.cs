@@ -8,7 +8,7 @@ namespace LogApp.Services
 {
     public interface ILoggerService
     {
-        void Log(string message, Category category, Priority priority,
+        void Log(string message, Category category = Category.Debug, Priority priority = Priority.None,
                     [CallerMemberName] string memberName = "",
                     [CallerFilePath] string filePath = "",
                     [CallerLineNumber] int lineNumber = -1);

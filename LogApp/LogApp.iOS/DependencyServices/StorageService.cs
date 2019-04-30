@@ -7,6 +7,8 @@ using System.Text;
 using Foundation;
 using LogApp.DependencyServices;
 using LogApp.iOS.DependencyServices;
+using LogApp.Services;
+using Prism.Logging;
 using UIKit;
 using Xamarin.Forms;
 
@@ -21,6 +23,10 @@ namespace LogApp.iOS.DependencyServices
             var documents
               = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             var localAppData = Path.Combine(documents, "..", "Library");
+
+            var logger = (ILoggerService)App.Current.Container.Resolve(typeof(ILoggerService));
+            logger.Log($"path={localAppData}");
+
             return localAppData;
         }
     }

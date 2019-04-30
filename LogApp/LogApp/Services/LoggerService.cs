@@ -14,7 +14,7 @@ namespace LogApp.Services
             _LoggerFacade = loggerFacade;
         }
 
-        public void Log(string message, Category category, Priority priority,
+        public void Log(string message, Category category = Category.Debug, Priority priority = Priority.None,
                                 [CallerMemberName] string memberName = "",
                               [CallerFilePath] string filePath = "",
                               [CallerLineNumber] int lineNumber = -1)
