@@ -7,3 +7,6 @@ Using NLog with Xamarin.Forms
 * Prism.Dryloc.Forms
 * .Net Standard 2.0
 * NLog
+
+## Feature
+* Source file name and line number are output
